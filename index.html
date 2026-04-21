@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+<body>
+
+  <div class="container-fluid "> <!-- container-fluid = contenedor que ocupa el 100% del ancho de la pantalla -->
+    <div class="row color-grey">
+      <!-- row = crea una fila del sistema de grid de Bootstrap//color-grey = clase personalizada que aplica un fondo gris -->
+      <div class="col-sm-2">
+        <!-- col-sm-2 = columna que ocupa 2 de las 12 columnas en pantallas pequeñas en adelante -->
+        <i class="bi bi-instagram fs-1 ms-3"></i>
+        <!-- bi bi-instagram = icono de Instagram (Bootstrap Icons)   fs-1 = tamaño de fuente grande para el icono  ms-3 = margen izquierdo (margin-start) para separarlo del borde -->
+        Instagram
+      </div>
+
+      <div class="col-sm-10 d-flex justify-content-end gap-3"> <!-- col-sm-10 = columna que ocupa 10 de las 12 columnas en pantallas pequeñas en adelante 
+       d-flex = convierte la columna en un contenedor flex
+       justify-content-end = alinea los elementos central
+       gap-3 = Es como poner “espaciadores invisibles” entre los elementos. -->
+
+        <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal">
+          Create a new post
+        </button>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <!-- Este es el modal, o sea, la ventanita que aparece encima de la página
+       cuando quieres crear un nuevo post. -->
+
+  <div class="modal-dialog">
+    <!-- Esto es como la cajita donde va todo el contenido del modal. -->
+
+    <div class="modal-content">
+      <!-- Aquí dentro va todo lo que se ve: el título, el texto, los botones, todo. -->
+
+      <div class="modal-header">
+        <!-- Esta es la parte de arriba del modal, como la cabecera. -->
+
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Create un nuevo post</h1>
+        <!-- Este es el título del modal, el nombre de la ventanita. -->
+
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        <!-- Este botoncito con una X sirve para cerrar el modal. -->
+      </div>
+
+      <div class="modal-body">
+        <!-- Esta es la parte del medio del modal, donde escribes tu post. -->
+
+        <div class="mb-3">
+          <!-- Esto es un bloque con un poquito de espacio abajo. -->
+
+          <label for="exampleFormControlTextarea1" class="form-label">Ya puedes crear un nuevo post</label>
+          <!-- Este es el texto que te dice qué tienes que hacer. -->
+
+          <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+          <!-- Aquí es donde escribes lo que quieras poner en tu post. -->
+
+          <div class="d-flex gap-3 mt-3">
+            <!-- Este es un mini contenedor que pone los botones en fila,
+                 con un huequito entre ellos y un espacio arriba. -->
+
+            <button class="btn btn-light">
+              <!-- Este es el botoncito de la cámara, para añadir una foto. -->
+              <i class="bi bi-camera fs-4"></i>
+            </button>
+
+            <button class="btn btn-light">
+              <!-- Este es el botoncito del localizador, para añadir una ubicación. -->
+              <i class="bi bi-geo-alt-fill fs-4"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal-footer">
+        <!-- Esta es la parte de abajo del modal, donde están los botones finales. -->
+
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+        <!-- Botón para cerrar el modal sin guardar nada. -->
+
+        <button type="button" class="btn btn-success">Guardar cambios</button>
+        <!-- Botón para guardar el post que estás creando. -->
+      </div>
+
+    </div>
+  </div>
+</div>
+
+        <div class="dropdown">
+          <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+            aria-expanded="false"><i class="bi bi-gear-fill"></i>
+          </button>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Profile</a></li>
+            <li><a class="dropdown-item" href="#">Accesbilites</a></li>
+            <li><a class="dropdown-item" href="#">Privacy and data</a></li>
+            <li><a class="dropdown-item text-danger" href="#">Salir</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <ul class="nav nav-pills justify-content-center mb-3" id="pills-tab" role="tablist">
+    <li class="nav-item" role="presentation">
+      <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home"
+        type="button" role="tab" aria-controls="pills-home" aria-selected="true"><i
+          class="bi bi-grid-3x3-gap "></i></button>
+    </li>
+    <li class="nav-item" role="presentation">
+      <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile"
+        type="button" role="tab" aria-controls="pills-profile" aria-selected="false"><i
+          class="bi bi-grid-3x3-gap-fill"></i></button>
+    </li>
+  </ul>
+
+  <div class="tab-content" id="pills-tabContent">
+    <!-- Aquí es como una cajita grande donde van todas las pestañas.
+       Solo se ve una pestaña a la vez, y las otras se esconden. -->
+
+    <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab"
+      tabindex="0">
+      <!-- Esta es la pestaña que está abierta ahora mismo.
+         "show active" significa que esta es la que se está viendo.
+         Las otras pestañas están dormidas hasta que las clicas. -->
+
+      <div class="container justify-content-center nav-pills">
+        <!-- Esto es un contenedor que guarda el contenido de la pestaña.
+           "justify-content-center" hace que las cosas se pongan en el centro.
+           "nav-pills" es solo un estilo bonito para las pestañas. -->
+
+        <div class="row mt-4 row-gap-3">
+          <!-- Esto es una fila donde vas a poner cosas en columnas.
+             "mt-4" es un espacio arriba para que no esté pegado.
+             "row-gap-3" es un huequito entre las filas para que respiren. -->
+
+
+          <!-- Primera fila -->
+          <div class="col-4">
+            <!-- Esta es una columna que ocupa 4 partes de 12.
+               Es como decir: de toda la fila, esta cajita ocupa un trocito. -->
+            <img class="img-fluid"
+              src="https://imanesdeviaje.com/wp-content/uploads/2020/03/paisajes-mas-bonitos-del-mundo-polinesia-1.jpg"
+              alt="">
+          </div>
+
+          <div class="col-4">
+            <img class="img-fluid"
+              src="https://media-cdn.tripadvisor.com/media/attractions-splice-spp-674x446/09/67/2d/db.jpg" alt="">
+          </div>
+
+          <div class="col-4">
+            <img class="img-fluid"
+              src="https://www.mvgarden.com/garden-center/wp-content/uploads/2023/06/barbacoa-2048x1365-1.jpg" alt="">
+          </div>
+
+          <!-- Segunda fila -->
+          <div class="col-4">
+            <img class="img-fluid" src="https://www.top10listas.com/archivos/listas/-1713378404.jpg" alt="">
+          </div>
+
+          <div class="col-4">
+            <img class="img-fluid" src="https://caras.com.br/wp-content/uploads/2025/03/tais-araujo_lw0p3szl.jpg"
+              alt="">
+          </div>
+
+          <div class="col-4">
+            <img class="img-fluid" src="https://objetos-xlk.estaticos-marca.com/uploads/2025/03/28/15876369395466.jpeg"
+              alt="">
+          </div>
+
+
+          <!-- tercera fila -->
+          <div class="col-4">
+            <img class="img-fluid"
+              src="https://ichef.bbci.co.uk/ace/ws/640/cpsprodpb/8b8c/live/277f1130-bf16-11f0-b8cd-876b55a928f2.jpg.webp"
+              alt="">
+          </div>
+
+          <div class="col-4">
+            <img class="img-fluid"
+              src="https://thumbs.dreamstime.com/b/el-interior-de-la-vibrante-sala-estar-con-paredes-naranja-sof%C3%A1-amarillo-y-una-decoraci%C3%B3n-colorida-que-crea-un-agradable-espacio-392860643.jpg"
+              alt="">
+          </div>
+
+          <div class="col-4">
+            <img class="img-fluid"
+              src="https://image.europafm.com/clipping/cmsimages02/2017/05/29/A7F37592-3DAF-439C-9390-7A2FB0F90E9B/98.jpg?crop=1167,657,x0,y111&width=1900&height=1069&optimize=low&format=webply"
+              alt="">
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+
+    <div class="tab-pane fade" id="pills-profile" role="tabpanel">
+      <!-- Esta es otra pestaña, como una página escondida.
+       No se ve hasta que haces clic en la pestaña "Profile".
+       "fade" hace que aparezca con un efecto suave cuando se muestra. -->
+
+      <!-- POST 1 -->
+      <div class="card mb-4" style="width: 50rem; margin: auto;">
+        <!-- Esto es una tarjeta, como una cajita donde va un post.
+         "mb-4" le pone un espacio abajo para que no esté pegada a la siguiente tarjeta.
+         "width: 50rem" es el ancho de la tarjeta (bastante grande).
+         "margin: auto" hace que la tarjeta se quede en el centro, como si dijera: "quiero estar justo en el medio, gracias". -->
+        <div class="card-body d-flex justify-content-between">
+          <h3>El paraiso...</h3>
+          <span class="text-muted">2/15</span>
+        </div>
+        <img src="https://imanesdeviaje.com/wp-content/uploads/2020/03/paisajes-mas-bonitos-del-mundo-polinesia-1.jpg"
+          alt="">
+        <div class="card-body">
+          <b>145 Me gusta</b>
+          <p>Nos vamos a la polinesia a disfrutar de sus paisajes</p>
+        </div>
+      </div>
+
+      <!-- POST 2 -->
+      <div class="card mb-4" style="width: 50rem; margin: auto;">
+        <div class="card-body d-flex justify-content-between">
+          <h3>Salida callejera</h3>
+          <span class="text-muted">3/15</span>
+        </div>
+        <img src="https://media-cdn.tripadvisor.com/media/attractions-splice-spp-674x446/09/67/2d/db.jpg" alt="">
+        <div class="card-body">
+          <b>845 Me gusta</b>
+          <p>saber disfrutar de la vida es lo que nos hace felices</p>
+        </div>
+      </div>
+
+      <!-- POST 3 -->
+      <div class="card mb-4" style="width: 50rem; margin: auto;">
+        <div class="card-body d-flex justify-content-between">
+          <h3>Pasando tiempo con la familia <3 </h3>
+              <span class="text-muted">4/15</span>
+        </div>
+        <img src="https://www.mvgarden.com/garden-center/wp-content/uploads/2023/06/barbacoa-2048x1365-1.jpg" alt="">
+        <div class="card-body">
+          <b>95 Me gusta</b>
+          <p> Pasando tiempo con la familia es lo mejor, aparte, juan ha traido una sorpresa</p>
+        </div>
+      </div>
+
+      <!-- POST 4 -->
+      <div class="card mb-4" style="width: 50rem; margin: auto;">
+        <div class="card-body d-flex justify-content-between">
+          <h3>Cultura</h3>
+          <span class="text-muted">5/15</span>
+        </div>
+        <img src="https://www.top10listas.com/archivos/listas/-1713378404.jpg" alt="">
+        <div class="card-body">
+          <b>625 Me gusta</b>
+          <p>El jazz me hace descubrir nuevas emociones, es algo inexplicable</p>
+        </div>
+      </div>
+
+      <!-- POST 5 -->
+      <div class="card mb-4" style="width: 50rem; margin: auto;">
+        <div class="card-body d-flex justify-content-between">
+          <h3>Click </h3>
+          <span class="text-muted">6/15</span>
+        </div>
+        <img src="https://caras.com.br/wp-content/uploads/2025/03/tais-araujo_lw0p3szl.jpg" alt="">
+        <div class="card-body">
+          <b>949 Me gusta</b>
+          <p>Has visto que pedazo de modelo, y que buen trabajo ;) </p>
+        </div>
+      </div>
+
+      <!-- POST 6 -->
+      <div class="card mb-4" style="width: 50rem; margin: auto;">
+        <div class="card-body d-flex justify-content-between">
+          <h3>Feliç Sant Jordi</h3>
+          <span class="text-muted">7/15</span>
+        </div>
+        <img src="https://objetos-xlk.estaticos-marca.com/uploads/2025/03/28/15876369395466.jpeg" alt="">
+        <div class="card-body">
+          <b>55 Me gusta</b>
+          <p>El mejor dia de cualquier catalan, 23 de abril es magicoooo</p>
+        </div>
+      </div>
+
+      <!-- POST 7 -->
+      <div class="card mb-4" style="width: 50rem; margin: auto;">
+        <div class="card-body d-flex justify-content-between">
+          <h3>Safari timee</h3>
+          <span class="text-muted">8/15</span>
+        </div>
+        <img src="https://ichef.bbci.co.uk/ace/ws/640/cpsprodpb/8b8c/live/277f1130-bf16-11f0-b8cd-876b55a928f2.jpg.webp"
+          alt="">
+        <div class="card-body">
+          <b>585 Me gusta</b>
+          <p>Que nos hemos ido a hacer un safari en África, las zebras son muuuuy bonitas!</p>
+        </div>
+      </div>
+
+      <!-- POST 8 -->
+      <div class="card mb-4" style="width: 50rem; margin: auto;">
+        <div class="card-body d-flex justify-content-between">
+          <h3>Mi Salon soñado!!</h3>
+          <span class="text-muted">9/15</span>
+        </div>
+        <img
+          src="https://thumbs.dreamstime.com/b/el-interior-de-la-vibrante-sala-estar-con-paredes-naranja-sof%C3%A1-amarillo-y-una-decoraci%C3%B3n-colorida-que-crea-un-agradable-espacio-392860643.jpg"
+          alt="">
+        <div class="card-body">
+          <b>178 Me gusta</b>
+          <p>He visto esta idea en Pinterest y me encantó! Ojala algun dia... </p>
+        </div>
+      </div>
+
+      <!-- POST 9 -->
+      <div class="card mb-4" style="width: 50rem; margin: auto;">
+        <div class="card-body d-flex justify-content-between">
+          <h3>Te puedes creer?</h3>
+          <span class="text-muted">10/15</span>
+        </div>
+        <img
+          src="https://image.europafm.com/clipping/cmsimages02/2017/05/29/A7F37592-3DAF-439C-9390-7A2FB0F90E9B/98.jpg?crop=1167,657,x0,y111&width=1900&height=1069&optimize=low&format=webply"
+          alt="">
+        <div class="card-body">
+          <b>1009 Me gusta</b>
+          <p>Mi jefa me estaba pidiendo que me quedara 1 hora mas en la oficina, y mi cara: </p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  </div>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
